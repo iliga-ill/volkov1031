@@ -1,0 +1,44 @@
+<ng-container *ngIf="goods.length > 0">
+    <div class="row">
+      <div class="col-12">
+        <h5>{{ title }}</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col-1">Название</th>
+              <th scope="col-3">Категория</th>
+              <th scope="col-3">Вес, кг</th>
+              <th scope="col-1">Цена, руб</th>
+              <th scope="col-1">Кол-во</th>
+              <th scope="col-1"></th>
+              <th scope="col-1"></th>
+              <th scope="col-1"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let good of goods">
+              <!------------------------------------------------------------>
+                <ng-container>
+                    <td>{{ good.name }}</td>
+                    <td>{{ good.category }}</td>
+                    <td>{{ good.weight }}</td>
+                    <td>{{ good.cost}}</td>
+                    <td>{{ good.number}}</td>
+                    <td>
+                      <button class="btn btn-outline-info btn-sm" (click)="onInfo(worker)">Сведения</button> 
+                    </td>
+                </ng-container>
+  
+                <td>
+                  <button class="btn btn-outline-warning btn-sm" (click)="onHideWorker(worker.id)">Скрыть</button>
+                </td>
+  
+                <td>
+                  <button class="btn btn-outline-danger btn-sm" (click)="onDeleteWorker(worker.id)">Удалить</button>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-container>

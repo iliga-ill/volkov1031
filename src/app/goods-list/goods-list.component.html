@@ -1,0 +1,6 @@
+<app-list
+    [title]="'Все сотрудники'"
+    [goods]="getList()"
+    (deleteWorker)="onDeleteById($event)"
+    (changeWorker)="onChangeById($event)"
+  ></app-list>
