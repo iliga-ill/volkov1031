@@ -1,5 +1,43 @@
+<button class="btn btn-primary btn-sm mt-3 mb-3" routerLink="/addGood">Добавить товар</button>
+
+
+<div class="row mt-2 mb-3">
+  <div class="ml-3"><a>Фильтры:</a></div>
+  <div class="col-1 mr-1">
+  <button class="btn btn-primary btn-sm " (click)="onButton(1)" *ngIf="ButtonController(1) == true">Мебель</button>
+  <button class="btn btn-danger btn-sm" (click)="onButton(1)" *ngIf="ButtonController(1) == false">Мебель</button>
+  </div>
+  <div class="col-1 mr-1">
+  <button class="btn btn-primary btn-sm" (click)="onButton(2)" *ngIf="ButtonController(2) == true" >Техника</button>
+  <button class="btn btn-danger btn-sm" (click)="onButton(2)" *ngIf="ButtonController(2) == false">Техника</button>
+  </div>
+  <div class="col-1 mr-1">
+  <button class="btn btn-primary btn-sm" (click)="onButton(3)" *ngIf="ButtonController(3) == true" >Книги</button>
+  <button class="btn btn-danger btn-sm" (click)="onButton(3)" *ngIf="ButtonController(3) == false">Книги</button>
+  </div>
+  <div class="col-1 mr-1">
+  <button class="btn btn-primary btn-sm" (click)="onButton(4)" *ngIf="ButtonController(4) == true" >Телефоны</button>
+  <button class="btn btn-danger btn-sm" (click)="onButton(4)" *ngIf="ButtonController(4) == false">Телефоны</button>
+  </div>
+  <div class="col-2 mr-1">
+  <button class="btn btn-primary btn-sm" (click)="onButton(5)" *ngIf="ButtonController(5) == true">В наличии</button>
+  <button class="btn btn-danger btn-sm" (click)="onButton(5)" *ngIf="ButtonController(5) == false">В наличии</button>
+  </div>
+  <div class="col-2 mr-1">
+  <button class="btn btn-primary btn-sm" (click)="onButton(6)" *ngIf="ButtonController(6) == 0 || ButtonController(6) == 1">Цена по возрастанию</button>
+  <button class="btn btn-primary btn-sm" (click)="onButton(6)" *ngIf="ButtonController(6) == 2">Цена по убыванию</button>
+  </div>
+  <div class="col-2 mr-1">
+  <button class="btn btn-primary btn-sm" (click)="onButton(7)" *ngIf="ButtonController(7) == 0 || ButtonController(7) == 1">Количество по убыванию</button>
+  <button class="btn btn-primary btn-sm" (click)="onButton(7)" *ngIf="ButtonController(7) == 2">Количество по возрастанию</button>
+  </div>
+</div>
+
+
+
+
 <app-list
-    [title]="'Все сотрудники'"
+    [title]="'Все товары'"
     [goods]="getList()"
     (deleteWorker)="onDeleteById($event)"
     (changeWorker)="onChangeById($event)"

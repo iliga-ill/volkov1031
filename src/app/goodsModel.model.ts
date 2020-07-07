@@ -2,11 +2,12 @@
 export interface MyGood {
   id: number;
   name: string;
-  cost: string;
+  cost: number;
   producer:string;
   category:string;
-  weight:string;
-  number: string;
+  weight:number;
+  number: number;
+  articul?: string;
 }
 
 export enum MyCategory {

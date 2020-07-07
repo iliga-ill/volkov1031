@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { MyGood} from 'src/app/goodsModel.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -34,8 +34,8 @@ export class GoodsService {
     return this.http.put(url, goods).toPromise()
   }
 
-  set(goods){
-    this.onGoods=goods;
+  set(good){
+    this.onGoods=good;
   }
 
   get(){

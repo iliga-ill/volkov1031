@@ -1,0 +1,42 @@
+<div class="col-8" [formGroup]="ChangeForm">
+    <div class="row mt-1">
+     <div class="col-4">
+        <input type="text" class="form-control" placeholder="Название" formControlName="name"/>
+     </div>
+     <div class="col-4">
+        <input type="text" class="form-control" placeholder="Стоимость" formControlName="cost"/>
+      </div>
+     <div class="col-4">
+        <input type="text" class="form-control" placeholder="Производитель" formControlName="producer" />
+      </div>
+    </div>
+
+    <div class="row mt-1">
+      <div class="col-4">
+         <input type="text" class="form-control" placeholder="Вес" formControlName="weight"/>
+      </div>
+      <div class="col-4">
+         <input type="text" class="form-control" placeholder="Число на складе" formControlName="number"/>
+       </div>
+      <div class="col-4">
+         <input type="text" class="form-control" placeholder="Артикул" formControlName="articul"/>
+       </div>
+     </div>
+  </div>
+
+    <div class="row mt-2 ml-3">
+      <select class="col-4 custom-select" [(ngModel)]="category">
+        <option [ngValue]="Frukt">Мебель</option>
+        <option [ngValue]="Ovosh">Техника</option>
+        <option [ngValue]="Meat">Книги</option>
+        <option [ngValue]="Egg">Телефоны</option>
+      </select>
+      <div class="col-3 mt-2">
+        <button class="btn btn-primary btn-sm" (click)="onAddWorker()" [disabled]="number()">Добавить</button>
+      </div>
+
+      <div class="col-2 mt-2">
+          <button class = "btn btn-primary btn-sm" routerLink="/GoodsList">Назад</button>
+      </div>
+      
+    </div>

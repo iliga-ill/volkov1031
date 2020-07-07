@@ -3,6 +3,8 @@ import {
   MyGood,
   MyCategory
 } from 'src/app/goodsModel.model';
+import { GoodsService } from 'src/app/shared/goods.service';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -16,9 +18,24 @@ export class ListComponent implements OnInit {
   @Output() deleteWorker = new EventEmitter<number>();
   @Output() changeWorker = new EventEmitter<number>();
 
-  constructor() { }
+  constructor(public goodsService:GoodsService,public router: Router) { }
 
   ngOnInit(): void {
   }
+
+  onDeleteWorker(id: number) {
+    this.deleteWorker.emit(id);
+  }
+
+  async ChangeNumber(Operation,good){
+    if (Operation == 1){await this.goodsService.changeGoods(good.number++);}
+    if (Operation == 2){await this.goodsService.changeGoods(good.number--);}
+  }
+
+  async onChange(good){
+    await this.goodsService.set(good);
+    this.router.navigate(["/ChangeGood"]);
+  }
+  
 
 }
