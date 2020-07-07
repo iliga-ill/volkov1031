@@ -8,10 +8,10 @@ import { GoodsService } from 'src/app/shared/goods.service';
 import { Router } from '@angular/router';
 
 interface ChangeForm {
-  id: string;
+  articul: string;
   name: string;
   cost: number;
-  producer: string;
+  producer?: string;
   weight:number;
   number: number;
 }
@@ -35,7 +35,7 @@ export class ChangeFormComponent implements OnInit {
 
   OpenGood:MyGood;
 
-  ChangeId;
+  ChangeArticul;
   ChangeName;
   ChangeCost;
   CangeProducer;
@@ -52,10 +52,10 @@ export class ChangeFormComponent implements OnInit {
 
   constructor(public goodsService:GoodsService,public router: Router) { 
     this.ChangeForm = new FormGroup({
-      id: new FormControl(null,[Validators.required]),
+      articul: new FormControl(null,[Validators.required]),
       name: new FormControl(null,[Validators.required]),
       cost: new FormControl(null,[Validators.required]),
-      producer: new FormControl(null,[Validators.required]),
+      producer: new FormControl(null,[Validators.nullValidator]),
       weight: new FormControl(null,[Validators.required]),
       number: new FormControl(null,[Validators.required]),
     });
@@ -95,7 +95,7 @@ export class ChangeFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onChangeWorker(){
-    this.ChangeId=this.OpenGood.id;
+    this.ChangeArticul=this.OpenGood.articul;
     this.ChangeName=this.OpenGood.name;
     this.ChangeCost=this.OpenGood.cost;
     this.CangeProducer=this.OpenGood.producer;
@@ -111,15 +111,13 @@ export class ChangeFormComponent implements OnInit {
   }
 
   onSubmitChanges() {
-      this.onChange=false;
-      let push:MyGood=this.ChangeForm.value;
-      push.id=this.OpenGood.id;
-      push.category=this.CangeCategory;
-      console.log(this.CangeCategory)
-      this.onChangeById(push)
-      this.OpenGood=push;
-      this.ChangeForm.reset();
-      
+    this.onChange=false;
+    let push:MyGood=this.ChangeForm.value;
+    push.category=this.CangeCategory;
+    push.id=this.OpenGood.id;
+    this.onChangeById(push)
+    this.OpenGood=push;
+    this.ChangeForm.reset(); 
   }
 
   number(){

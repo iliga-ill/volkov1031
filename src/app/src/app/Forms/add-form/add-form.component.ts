@@ -25,7 +25,7 @@ export class AddFormComponent implements OnInit {
   
   Goods: MyGood []=[];
 
-  category = "Фрукт";
+  category = "Мебель";
 
   Frukt="Мебель"
   Ovosh = "Техника"

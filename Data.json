@@ -11,43 +11,32 @@
       "category": "Мебель"
     },
     {
-      "articul": "35wed3",
+      "articul": "3d4",
       "name": "Яблоко2",
       "cost": "2",
-      "producer": "Яблоня2",
+      "producer": "33",
       "weight": "2",
-      "number": "222",
-      "id": "2",
-      "category": "Мебель"
-    },
-    {
-      "id": "3",
-      "name": "Яблоко",
-      "cost": "30",
-      "producer": "Яблоня",
-      "weight": "1",
-      "number": "100",
-      "category": "Мебель"
+      "number": "200",
+      "category": "Мебель",
+      "id": "2"
     },
     {
       "id": "4",
-      "articul": "124f34",
       "name": "Яблоко",
       "cost": "30",
-      "producer": "Яблоня",
-      "category": "Техника",
+      "producer": "1",
       "weight": "1",
-      "number": "100"
+      "number": "1",
+      "category": "Техника"
     },
     {
       "id": "5",
-      "articul": "124f34",
-      "name": "Яблоко",
-      "cost": "30",
-      "producer": "Яблоня",
-      "category": "Техника",
-      "weight": "1",
-      "number": "100"
+      "name": "17",
+      "cost": "17",
+      "producer": "17",
+      "weight": "17",
+      "number": "17",
+      "category": "Техника"
     },
     {
       "name": "1",
@@ -58,16 +47,6 @@
       "articul": "1",
       "category": "Книги",
       "id": "6"
-    },
-    {
-      "articul": "3",
-      "name": "3",
-      "cost": "3",
-      "producer": "-3",
-      "weight": "3",
-      "number": "0",
-      "id": "7",
-      "category": "Книги"
     },
     {
       "name": "0",
@@ -88,6 +67,36 @@
       "articul": "0",
       "category": "Телефоны",
       "id": "9"
+    },
+    {
+      "name": "20",
+      "cost": "20",
+      "producer": "20",
+      "weight": "20",
+      "number": "20",
+      "articul": "20",
+      "category": "Техника",
+      "id": "91"
+    },
+    {
+      "name": "25",
+      "cost": "25",
+      "producer": "25",
+      "weight": "25",
+      "number": "25",
+      "articul": "25",
+      "category": "Мебель",
+      "id": "911"
+    },
+    {
+      "articul": "777",
+      "name": "777",
+      "cost": "777",
+      "producer": "777",
+      "weight": "777",
+      "number": "777",
+      "category": "Мебель",
+      "id": "9111"
     }
   ]
 }

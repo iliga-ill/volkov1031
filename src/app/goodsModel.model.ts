@@ -3,7 +3,7 @@ export interface MyGood {
   id: number;
   name: string;
   cost: number;
-  producer:string;
+  producer?:string;
   category:string;
   weight:number;
   number: number;
